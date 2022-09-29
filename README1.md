@@ -1,6 +1,6 @@
 <img src="img/Icon-jpg-small.jpg" width="300px">
 
-(c) 2022 Nicholas Outram Tai chun Chan
+(c) 2022 Tai chun Chan
 
 # Embedded-Systems
 
