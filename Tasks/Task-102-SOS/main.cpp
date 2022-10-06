@@ -23,47 +23,71 @@ int main()
         //On for 500ms
         greenLED = 1;
         buzz.playTone("C");
-        wait_us(WAIT_TIME_MS * 500);  //250ms
+        wait_us(WAIT_TIME_MS * 300);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 300);
 
         //On for 500ms
-        greenLED = 0;
+        greenLED = 1;
         buzz.playTone("D");
-        wait_us(WAIT_TIME_MS * 500);  //250ms
+        wait_us(WAIT_TIME_MS * 300);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 300);
 
         //On for 500ms
         greenLED = 1;
         buzz.playTone("E");
-        wait_us(WAIT_TIME_MS * 500);  //250ms
+        wait_us(WAIT_TIME_MS * 300);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 900);
 
         //On for 500ms
-        greenLED = 0;
+        greenLED = 1;
         buzz.playTone("F");
-        wait_us(WAIT_TIME_MS * 500);  //250ms
+        wait_us(WAIT_TIME_MS * 900);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 300);
 
         //On for 500ms
         greenLED = 1;
         buzz.playTone("G");
-        wait_us(WAIT_TIME_MS * 500);  //250ms
-
-        //On for 500ms
+        wait_us(WAIT_TIME_MS * 900);  //250ms
         greenLED = 0;
-        buzz.playTone("A");
-        wait_us(WAIT_TIME_MS * 500);  //250ms
+        wait_us(WAIT_TIME_MS * 300);
 
         //On for 500ms
         greenLED = 1;
-        buzz.playTone("B");
-        wait_us(WAIT_TIME_MS * 500);  //250ms
+        buzz.playTone("A", Buzzer::HIGHER_OCTAVE);
+        wait_us(WAIT_TIME_MS * 900);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 900);
+
+        //On for 500ms
+        greenLED = 1;
+        buzz.playTone("B", Buzzer::HIGHER_OCTAVE);
+        wait_us(WAIT_TIME_MS * 300);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 300);
 
 
         //Off for 500ms
-        greenLED = 0;
+        greenLED = 1;
         buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
-        wait_us(WAIT_TIME_MS * 500);  //250ms
+        wait_us(WAIT_TIME_MS * 300);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 300);
+
+        //Off for 500ms
+        greenLED = 1;
+        buzz.playTone("D", Buzzer::HIGHER_OCTAVE);
+        wait_us(WAIT_TIME_MS * 300);  //250ms
+        greenLED = 0;
+        wait_us(WAIT_TIME_MS * 300);
+
 
         //Pause
         buzz.rest();
-        wait_us(WAIT_TIME_MS * 500);
+        wait_us(WAIT_TIME_MS * 1000);
 
     }
 }
