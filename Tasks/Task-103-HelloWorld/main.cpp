@@ -35,7 +35,7 @@ int main()
     // (I used the keyword volatile to force it to use memory... long story and one for later)
     volatile int counter = 10;
 
-    while (counter < 15)
+    while (counter < 16)
     {
         //Toggle the LED
         ledBlue = !ledBlue;
@@ -54,7 +54,30 @@ int main()
     ledGreen = 1;
     ledBlue = 1;
 
-    wait_us(osWaitForever);
+    wait_us(WAIT_TIME_MS *500);
 
-    
+
+    while (counter >= 15)
+    {
+        
+        wait_us(WAIT_TIME_MS * 500);
+        //Toggle the LED
+        ledBlue = !ledBlue;
+
+        //Add 1 to the counter "variable"
+        counter = counter + 1;
+
+        //Display in the terminal
+        printf("Count: %d\n", counter);
+        ledRed = 1;
+        ledGreen = 1;
+        ledBlue = 1;
+        
+
+        //Wait
+        wait_us(WAIT_TIME_MS * 250);
+        ledRed = 0;
+        ledGreen = 0;
+        ledBlue = 0;
+    }
 }
