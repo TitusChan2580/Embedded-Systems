@@ -1,6 +1,9 @@
 #include "uop_msb.h"
 using namespace uop_msb;
 
+
+//* is 42 % is 37 £ is 194 and space is 32
+
 Buzzer buzz;
 
 DigitalOut led1(LED1);
