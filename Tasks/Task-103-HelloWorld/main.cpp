@@ -33,10 +33,34 @@ int main()
 
     // This is a variable (not an oject as it has no functions) that stores a whole number (integer) in memory
     // (I used the keyword volatile to force it to use memory... long story and one for later)
-    volatile int counter = 0;
+    volatile int counter = 10;
 
-    while (true)
+    while (counter < 16)
     {
+        //Toggle the LED
+        ledBlue = !ledBlue;
+
+        //Display in the terminal
+        printf("Count: %d\n", counter);
+
+        //Wait
+        wait_us(WAIT_TIME_MS * 1000);
+
+        //Add 1 to the counter "variable"
+        counter = counter + 1;        
+    }
+
+    ledRed = 1;
+    ledGreen = 1;
+    ledBlue = 1;
+
+    wait_us(WAIT_TIME_MS *500);
+
+
+    while (counter >= 15)
+    {
+        
+        wait_us(WAIT_TIME_MS * 500);
         //Toggle the LED
         ledBlue = !ledBlue;
 
@@ -45,8 +69,15 @@ int main()
 
         //Display in the terminal
         printf("Count: %d\n", counter);
+        ledRed = 1;
+        ledGreen = 1;
+        ledBlue = 1;
+        
 
         //Wait
-        wait_us(WAIT_TIME_MS * 1000);
+        wait_us(WAIT_TIME_MS * 250);
+        ledRed = 0;
+        ledGreen = 0;
+        ledBlue = 0;
     }
 }
