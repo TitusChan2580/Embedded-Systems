@@ -31,3 +31,4 @@ int main()
     //Loop forever
     while (true);
 }
+// xzy will repeat the program 100 and 50 will be able to enter the grade
