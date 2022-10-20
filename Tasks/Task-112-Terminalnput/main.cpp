@@ -31,6 +31,7 @@ int main()
     int parsed = scanf("%d", &delay_ms);
     
     printf("You entered %d correct integer values. The value was %dms\n", parsed, delay_ms);
+    
 
     // Stop
     while (parsed > 0) {
