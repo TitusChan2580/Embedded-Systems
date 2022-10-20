@@ -28,3 +28,4 @@ int main()
     //Loop forever
     while (true);
 }
+// 50 50a 110 we got scanf found 1 hits xx we got it to repeats
