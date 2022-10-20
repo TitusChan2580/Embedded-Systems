@@ -10,8 +10,8 @@ int main()
     int grade=-1, hits=0;
 
     printf("\n\nPress Return to Start\n\n");
-
-    while (hits < 1) {
+    
+    while ( (hits < 1) || (grade>=100) || (grade<0) ) {
         //Clear out the serial port (keyboard)
         flushInputBuffer();
         //Prompt user
@@ -29,3 +29,4 @@ int main()
     while (true);
 }
 // 50 50a 110 we got scanf found 1 hits xx we got it to repeats
+// xzy and 100 just repeats the loop 50 works
