@@ -30,21 +30,21 @@ int main()
         int btn = buttons;     //Local to the while-loop  
 
         switch (btn) {
-            case 0:
+            case 1:
             //Nothing pressed
             greenLED = 0;
             yellowLED = 0;
             redLED = !redLED;
             break;
 
-            case 1:
+            case 4:
             //Button A only
             redLED = 0;
             yellowLED = 0;            
             greenLED = !greenLED;
             break;
 
-            case 3: 
+            case 2: 
             //Button A and B
             redLED = 0;
             yellowLED = !yellowLED;            
@@ -64,6 +64,7 @@ int main()
         wait_us(100000);  
     }
 }
-
+// if a was pressed the red flashing light will turn greenthen if ab was press together the light will turn yellow and when abc is pressed then all lights are off
+//
 
 
