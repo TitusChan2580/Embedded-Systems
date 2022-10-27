@@ -11,13 +11,20 @@ int main()
     while (true) {
 
         //Wait for a press
-        while (ButtonA==0) { };
+        while (BlueButton==0) { };
+        wait_us(5000000);
 
         //Toggle LED
         redLED = !redLED;
 
         //Wait for release
-        while (ButtonA==1) { };
+        while (BlueButton==1) { };
+        wait_us(5000000);
     }
 }
 
+//the code just turn on light when a is pressed
+// works like 99% of the time for button a but for blue button it only works like 70% of the time
+//works like 100 % of the time if there is a 100ms delay
+//does work like 50% of the time when it  1 us
+//it takes to long to work when it at 5s
