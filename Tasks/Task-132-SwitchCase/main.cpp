@@ -30,6 +30,16 @@ int main()
         int btn = buttons;     //Local to the while-loop  
 
         switch (btn) {
+            case 7:
+            redLED = 1;
+            wait_us(100000);
+            yellowLED = 1;
+            wait_us(100000);
+            greenLED = 1;
+            wait_us(100000);
+
+            
+
             case 1:
             //Nothing pressed
             greenLED = 0;
