@@ -140,6 +140,7 @@ int main()
 }
 
 
+// there are 4 input device
 
 
 
