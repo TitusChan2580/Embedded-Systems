@@ -31,13 +31,31 @@ int main()
         //Test Button A
         if (btnA == 1) {
             redLED = !redLED;    //Toggle RED led
-            count = count + 1;            //Increment count
+            greenLED = 0;
+            count = count + ( (count<99) ? 1 : 0 );            //Increment count
             disp = count;       //Update display
         }
+        else if(ButtonB == 1){
+            redLED = !redLED;    //Toggle RED led
+            greenLED = 0;
+            count = count - ( (count>0) ? 1 : 0 );            //Increment count
+            disp = count;
+
+        }
+        else{
+            greenLED = 1;
+            redLED = 0;
+        }
+
 
         // Slow it down a bit (and debounce the switches)
         wait_us(100000);  
     }
 }
+
+//it stops working after the counter goes pass 99
+// when u press both the counter only increase maybe because the if code for the button A is first i did 7 at 6 lol
+
+
 
 
