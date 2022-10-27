@@ -83,7 +83,9 @@ int main()
             //Update display
             disp = count;               
         }
-        
+         if ((buttonA == 1) && (buttonB == 1)) {
+            count = 0;
+        }
         // Slow it down a bit (and debounce the switches)
         wait_us(250000);  
     }
