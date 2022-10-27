@@ -18,24 +18,16 @@ DigitalOut greenLED(TRAF_GRN1_PIN);     //Green Traffic 1
 //Dual Digit 7-segment Display
 LatchedLED disp(LatchedLED::SEVEN_SEG);
 
+void funcA(){
+    redLED = !redLED;}
 
-void funcA()
-{
-    redLED = !redLED;
-}
+void funcB(){
+    yellowLED = !yellowLED;}
 
-void funcB()
-{
-    yellowLED = !yellowLED;
-}
+void funcTmr(){
+    greenLED = !greenLED;}
 
-void funcTmr()
-{
-    greenLED = !greenLED;
-}
-
-int main()
-{
+int main(){
     //Set up interrupts
     btnA.rise(&funcA);
     btnB.fall(&funcB);
@@ -45,11 +37,6 @@ int main()
     while (true) {
         sleep();
 
-        printf("I have been woken %d times\n", ++counter);
-    }
-}
+        printf("I have been woken %d times\n", ++counter);    }}
 
-
-
-
-
+//a turns on red b turns on yellow
