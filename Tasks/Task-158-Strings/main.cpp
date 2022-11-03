@@ -37,6 +37,7 @@ int main()
     for (unsigned int n=0; n<strlen(str2); n++) {
         printf("Character: %c\tASCII: %u\n", str2[n], str2[n]);
     }
+    // here it print outs the ascii version of each individual letter og wellcome to elec143
 
     //3. Copying strings with strcpy
     char str3[16];
@@ -63,7 +64,7 @@ int main()
         sprintf(str6, "I guess %X", x);
         printf("%s\n", str6);
     }
-
+    //it prints out the value inside the string but prints it out in hexidecimal but only 3
 
     //5. Unmarshalling data with sscanf
     char strList[][8] = {   "1024", 
@@ -77,6 +78,7 @@ int main()
         sscanf(strList[n], "%u", &val);
         printf("Found integer: %u\n", val);
     }
+    // prints out he numbers stored in the string
 
     //6. Comparing strings with strcmp
     char inputStr[64];
@@ -96,7 +98,7 @@ int main()
         else {
             printf("Please specify red, green or blue\n");
         }
-    }
+    }// it only keeps saying wat color eventho as i see from the code that it is mean ti turn on the the lights of the olor u typed in
 
 }
 
