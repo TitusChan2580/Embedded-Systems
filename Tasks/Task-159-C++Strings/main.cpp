@@ -53,3 +53,4 @@ int main()
     }
 }
 
+// this program first syas hello world 1234  then asks for a intiger then it says welcome to elec143 then ask for a color then it tuens on the lights with those corasponing color
