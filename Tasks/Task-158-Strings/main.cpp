@@ -98,7 +98,7 @@ int main()
         else {
             printf("Please specify red, green or blue\n");
         }
-    }// it only keeps saying wat color eventho as i see from the code that it is mean ti turn on the the lights of the olor u typed in
+    }// it turns on the light withe the corasponding color
 
 }
 
