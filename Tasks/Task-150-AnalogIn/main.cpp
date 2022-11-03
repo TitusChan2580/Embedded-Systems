@@ -4,6 +4,13 @@
 using namespace uop_msb;
 using namespace chrono;
 
+//led pins
+DigitalOut red(TRAF_RED1_PIN);       //Red Traffic 1
+DigitalOut yellow(TRAF_YEL1_PIN);    //Yellow Traffic 1
+DigitalOut green(TRAF_GRN1_PIN);     //Green Traffic 1
+
+
+
 //Fun output stuff
 LCD_16X2_DISPLAY disp;
 Buzzer buzz;
@@ -50,10 +57,28 @@ int main()
 
         //Write to terminal
         printf("--------------------------------\n");
-        printf("Potentiometer: %X\n", potVal);
-        printf("Light Dependant Resistor: %X\n", lightVal);
+        printf("Potentiometer: %d\n", potVal);
+        if (potVal > 0x8000){
+            yellow = 1;
+        }
+        else{
+            yellow = 0;
+        }
+        printf("Light Dependant Resistor: %d\n", lightVal);
+        if (lightVal < 2000){
+            green = 1 ;
+        }
+        else{
+            green = 0 ;
+        }
         int count = micVal - 0x8000 ;
         printf("Microphone: %d\n", count);   
+        if (micVal > 0x8000){
+            red = 1;
+        }
+        else{
+            red=0 ;
+        }
 
         //Wait 0.25 seconds
         wait_us(500000);
@@ -65,5 +90,9 @@ int main()
 //when u sturn the poiteniomter the falue increaces
 //when u brush the microphone the value increaces
 //i think the reason y we dont get constant values is because it travels as a wave there for like a wave it has ups and downs
+//when light is shone on the ldr it  the resistance goes downtherefore the brighter it is the lower the value and the darker it si the higher the value
 //able to obtain 0 and ffff but it is basiclly impossible to get  to 8000
-//when the room the value of the microphone is lose to 0
+//when the room the value of the microphone is close to 0
+// the smallest value i got was 13
+//able to see it wavering between a negative and a possitive value
+// am able to make the led flicker
